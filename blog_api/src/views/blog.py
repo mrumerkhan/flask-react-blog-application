@@ -37,7 +37,7 @@ class BlogListView(views.MethodView):
 
 
 class BlogDetailView(views.MethodView):
-    """Item Detail View"""
+    """Blog Detail View"""
 
     decorators = [TokenAuthentication()]
     lookup_field = "id"

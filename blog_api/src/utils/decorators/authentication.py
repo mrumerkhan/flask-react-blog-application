@@ -34,5 +34,3 @@ class TokenAuthentication:
             return get_response(*args, **kwargs)
 
         return authenticate
-
-

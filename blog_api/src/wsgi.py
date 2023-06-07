@@ -13,11 +13,11 @@ def get_wsgi_application():
     app.config.update(
         DEBUG=settings.DEBUG,
         ENV=settings.ENV,
-        SQLALCHEMY_DATABASE_URI=settings.SQLALCHEMY_DATABASE_URI
+        SQLALCHEMY_DATABASE_URI=settings.SQLALCHEMY_DATABASE_URI,
     )
     db.init_app(app)
-
     ma.init_app(app)
+
     with app.app_context():
         db.create_all()
 
